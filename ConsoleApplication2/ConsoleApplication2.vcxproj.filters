@@ -18,8 +18,13 @@
     <ClCompile Include="ConsoleApplication2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="自我练习.cpp">
+    <ClCompile Include="自我练习函数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="自我练习函数.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

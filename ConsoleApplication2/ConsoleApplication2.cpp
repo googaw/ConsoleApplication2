@@ -2,12 +2,29 @@
 //
 
 #include <iostream>
+#include "自我练习函数.h"
+#include <climits>
+
+//声明显示值域 函数原型
+int number_limit();
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "hello world!\n";
+    std::cout << add(3, 4)<<std::endl;
+    number_limit();
     return 0;
 
+}
+
+int number_limit()
+{
+    using namespace std;
+    cout<< "int的最大值" << INT_MAX << endl
+        << "short的最大值" << SHRT_MAX << endl
+        << "long的最大值" << LONG_MAX << endl
+        << "int的字节数" << sizeof(int);
+    return 0;
 }
 
 
