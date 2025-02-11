@@ -21,6 +21,9 @@
     <ClCompile Include="自我练习函数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="outfile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="自我练习函数.h">
