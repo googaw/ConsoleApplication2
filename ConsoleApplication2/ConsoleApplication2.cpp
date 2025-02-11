@@ -4,6 +4,8 @@
 #include <iostream>
 #include "自我练习函数.h"
 #include <climits>
+#include<array>
+#include<string>
 
 using namespace std;
 
@@ -12,15 +14,21 @@ int number_limit();
 int my_array();
 int my_pointer();
 int new_strct();
+int add_between();
+int formore();
+int total_sold();
 
 int main()
 {
-    std::cout << "hello world!\n";
-    std::cout << add(3, 4)<<std::endl;
+    cout << "hello world!\n";
+    cout << add(3, 4)<<std::endl;
     number_limit();
     my_array();
     my_pointer();
     new_strct();
+    add_between();
+    formore();
+    total_sold();
     return 0;
 }
 //类型范围练习
@@ -59,26 +67,91 @@ int my_pointer()
     return 0;
 }
 
+//创造结构类型，并使用指针结构
 int new_strct()
 {
-    struct MyStruct
-    {
-        char name[20];
-        float volume;
-        double price;
-    };
+    //struct MyStruct
+    //{
+    //    char name[20];
+    //    float volume;
+    //    double price;
+    //};
 
-    MyStruct* ps = new MyStruct;
-    cout << "Enter name of inflatable item: ";
-    cin.get(ps->name, 20);
-    cout << "Enter volume in cubic feet: ";
-    cin >> (*ps).volume;
-    cout << "Enter price: $";
-    cin >> ps->price;
-    cout << "name: " << (*ps).name << endl;
-    cout << "volume" << ps->volume << endl;
-    cout << "price" << ps->price << endl;
-    delete ps;
+    //MyStruct* ps = new MyStruct;
+    //cout << "Enter name of inflatable item: ";
+    //cin.get(ps->name, 20);
+    //cout << "Enter volume in cubic feet: ";
+    //cin >> (*ps).volume;
+    //cout << "Enter price: $";
+    //cin >> ps->price;
+    //cout << "name: " << (*ps).name << endl;
+    //cout << "volume" << ps->volume << endl;
+    //cout << "price" << ps->price << endl;
+    //delete ps;
+    return 0;
+}
+
+//编写两个用户输入整数，并计算两个整数之间的整数和
+int add_between()
+{
+    //int one_num,two_num,temp;
+    //cout << "输入两个数" << endl;
+    //cin >> one_num
+    //    >> two_num;
+    ////交换顺序，使小的为one_num
+    //if (one_num > two_num)
+    //{
+    //    temp = one_num;
+    //    one_num = two_num;
+    //    two_num = temp;
+    //}
+
+    //int sum = 0;
+    //for (int i = one_num;i <= two_num; i++)
+    //{
+    //    sum += i;
+    //}
+
+    //cout << "总数为： " << sum << endl;
+    return 0;
+}
+
+
+//用array数组重写阶乘
+int formore()
+{
+    const int arsize = 16;
+    array<long double, arsize> factorials = { 1,1 };
+    for (int i= 2; i < arsize; i++)
+    {
+        factorials[i] = i * factorials[i - 1];
+        cout << i << "!=" << factorials[i] << endl;
+    }
+    
+    return 0;
+}
+
+//计算一年销售数量
+int total_sold()
+{
+    const int one_year = 12;
+    //输入提示
+    string month_cin[one_year];
+    for (int i = 0; i < 12; i++)
+    {
+        month_cin[i] = "请输入第" + to_string(i + 1) + "月的销售额:";
+    }
+
+    int sum = 0;
+
+    for (int j = 0;j < 12; j++)
+    {
+        int month_sold;
+        cout << month_cin[j];
+        cin >> month_sold;
+        sum += month_sold;
+    }
+    cout << "总销售额为：" << sum << endl;
     return 0;
 }
 
