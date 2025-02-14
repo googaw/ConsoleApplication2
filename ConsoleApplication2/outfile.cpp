@@ -1,3 +1,8 @@
+#if 0
+
+
+
+
 //writing to a file
 #include<iostream>
 #include<fstream>
@@ -90,3 +95,5 @@ int main()
 
 
 }
+
+#endif // 0

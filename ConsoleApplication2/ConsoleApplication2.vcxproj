@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="ConsoleApplication2.cpp" />
     <ClCompile Include="outfile.cpp" />
+    <ClCompile Include="travel_sum.cpp" />
     <ClCompile Include="自我练习函数.cpp" />
   </ItemGroup>
   <ItemGroup>
