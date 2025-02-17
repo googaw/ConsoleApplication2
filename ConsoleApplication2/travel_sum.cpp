@@ -97,13 +97,18 @@ const int hour_to_min = 60;
 using namespace std;
 int Fill_array(double*, int);
 void show_array(double*, int);
-double* Reverse_array(double*, int);
+void Reverse_array(double*, int);
 
-void main()
+int main()
 {
 	double arr_1[60] = {0};
-	cout << Fill_array(arr_1, 60);
-	
+	int length = Fill_array(arr_1, 60);
+	cout << "数组长度为：" << length << endl;
+	show_array(arr_1, length);
+	Reverse_array(arr_1, length);
+	show_array(arr_1, length);
+	return 0;
+
 }
 //统计输入个数
 int Fill_array(double*num, int n)
@@ -122,12 +127,23 @@ int Fill_array(double*num, int n)
 }
 
 
-void show_array(double*, int)
+void show_array(double*num, int leng_th)
 {
-	
+	for (int i = 0;i < leng_th;i++)
+	{
+		cout << num[i]<<' ';
+	}
+	cout << endl;
 }
 
-double* Reverse_array(double*num, int)
+void Reverse_array(double* num, int leng_th)
 {
-	return num;
+	double temp;
+	for (int i=0,j = leng_th-1; i<j; i++,j--)
+	{	
+		temp = num[i];
+		num[i] = num[j];
+		num[j] = temp;
+	}
+	cout << "翻转后的值：";
 }
